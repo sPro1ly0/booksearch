@@ -1,0 +1,26 @@
+.book-item {
+    border-bottom: 1px solid #CCCCCC ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    min-width: 150px;
+}
+
+.book-description {
+    text-align: center;
+    width: 70%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: blue;
+    font-size: 1.01em;
+    text-decoration: underline;
+}

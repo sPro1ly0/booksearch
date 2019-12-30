@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
+import './BookResults.css';
+import BookItem from '../BookItem/BookItem';
 
 class BookResults extends Component {
     render() {
+
+        const books = this.props.bookItems.map((book, i) => 
+            <BookItem {...book} key={i}/>
+        );
         return (
             <div>
-                <ul>
-                    <li>
-                        <div>Picture of Book</div>
-                        <h2>Narnia Book Title</h2>
-                        <h3>Author: C.S. Lewis</h3>
-                        <h3>Price: $10.00</h3>
-                        <p>Summary of the Chronicles of Narnia Book Here for the user to read.</p>
-                    </li>
-                    <li>
-                        <div>Picture of Book</div>
-                        <h2>Harry Potter</h2>
-                        <h3>Author: J.K. Rowling</h3>
-                        <h3>Price: $12.00</h3>
-                        <p>Summary of the Harry Potter book here. Magic!</p>
-                    </li>
-                </ul>
+                {books}
             </div>
-        )
+        );
     }
 }
 

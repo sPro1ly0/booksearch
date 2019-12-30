@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './BookTypeFilter.css';
 
 class BookTypeFilter extends Component {
     render() {
         return (
-            <div>
+            <div className="book-type-filter">
                 <form>
                     <label>Book Type: </label>
                     <select>

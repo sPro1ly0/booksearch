@@ -1,3 +1,37 @@
 .search-bar {
     text-align: center;
+    background-color: darkgray;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar > form {
+    margin: 0 auto;
+    min-width: 298px;
+}
+
+label {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+input:active, input:focus {
+    background-color: lightyellow;
+}
+
+input {
+    padding-left: 3px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    height: 20px;
+}
+
+button:hover, button:focus {
+    border: 2px solid lightskyblue;
+    border-radius: 3px;
+    cursor: pointer;
 }
