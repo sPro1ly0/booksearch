@@ -9,6 +9,8 @@
 .search-bar > form {
     margin: 0 auto;
     min-width: 298px;
+    display: flex;
+    align-items: center;
 }
 
 label {
@@ -22,12 +24,13 @@ input:active, input:focus {
 
 input {
     padding-left: 3px;
+    font-size: 1em;
 }
 
 button {
     background-color: white;
     border: none;
-    height: 20px;
+    height: 23px;
 }
 
 button:hover, button:focus {

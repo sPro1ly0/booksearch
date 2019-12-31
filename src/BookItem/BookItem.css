@@ -1,12 +1,14 @@
 .book-item {
-    border-bottom: 1px solid #CCCCCC ;
+    border-bottom: 2px solid #CCCCCC ;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 5px 2px;
 }
 
 img {
     min-width: 150px;
+    border: 1px solid black;
 }
 
 .book-description {

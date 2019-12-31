@@ -31,7 +31,7 @@ export default function BookItem (props) {
         <div className="book-item">
             {image}
             <div className="book-description">
-                <a href={props.volumeInfo.infoLink}><h2>{props.volumeInfo.title}</h2></a>
+                <a href={props.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer"><h2>{props.volumeInfo.title}</h2></a>
                 <h3>Author: {author}</h3>
                 <h3>Price: {price}</h3>
                 <p>{props.volumeInfo.description}</p>
