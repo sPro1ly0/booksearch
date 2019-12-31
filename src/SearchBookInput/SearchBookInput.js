@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './SearchBook.css';
+import './SearchBookInput.css';
 import Filters from '../Filters/Filters';
-import BookResults from '../BookResults/BookResults';
+import BookResultsList from '../BookResultsList/BookResultsList';
 
-class SearchBook extends Component {
+class SearchBookInput extends Component {
 
     constructor(props){
         super(props);
@@ -97,10 +97,10 @@ class SearchBook extends Component {
                     //query={this.state.q}
                     changePrintType={this.changePrintTypeSelection}
                     changeBookType={this.changeBookTypeSelection}/>
-                <BookResults bookItems={this.state.items}/>
+                <BookResultsList bookItems={this.state.items}/>
             </>
         )
     }
 }
 
-export default SearchBook;
+export default SearchBookInput;

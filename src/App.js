@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBook from './SearchBook/SearchBook';
+import SearchBookInput from './SearchBookInput/SearchBookInput';
 
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
         <header>
           <h1>Google Book Search</h1>
         </header>
-        <SearchBook/>
+        <SearchBookInput/>
       </main>
     );
   }

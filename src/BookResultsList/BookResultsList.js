@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import './BookResults.css';
+import './BookResultsList.css';
 import BookItem from '../BookItem/BookItem';
 
-class BookResults extends Component {
+class BookResultsList extends Component {
     render() {
-
         const books = this.props.bookItems.map((book, i) => 
             <BookItem {...book} key={i}/>
         );
@@ -16,4 +15,4 @@ class BookResults extends Component {
     }
 }
 
-export default BookResults;
+export default BookResultsList;
