@@ -9,7 +9,7 @@ class BookResults extends Component {
             <BookItem {...book} key={i}/>
         );
         return (
-            <div>
+            <div className="book-result-list">
                 {books}
             </div>
         );

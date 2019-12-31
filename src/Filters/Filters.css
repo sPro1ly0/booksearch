@@ -6,3 +6,7 @@
     margin: 0px auto;
     align-items: center;
 }
+
+.book-type-filter {
+    padding-left: 20px;
+}

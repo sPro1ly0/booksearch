@@ -71,9 +71,8 @@ class SearchBook extends Component {
                         <button type="submit">Search</button>
                     </form>
                 </div>
-                <Filters />
+                <Filters query={this.state.q}/>
                 <BookResults bookItems={this.state.items}/>
-                
             </>
         )
     }
