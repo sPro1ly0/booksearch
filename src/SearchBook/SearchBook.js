@@ -9,16 +9,20 @@ class SearchBook extends Component {
         super(props);
         this.state = {
             q: "",
-            items: []
+            items: [],
+            printType: "all",
+            bookType: ""
         }
     }
 
     handleSubmit(e) {
         e.preventDefault();
         let query = this.state.q.toLowerCase().replace(/ /g, "+");
-        console.log(query);
-        const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=AIzaSyCTT0fo1MiiJFyaMcVdkUBrtqrjCeD57pU`;
+        let printFilter = this.state.printType;
+        let ebookFilter = this.state.bookType;
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&printType=${printFilter}${ebookFilter}&key=AIzaSyCTT0fo1MiiJFyaMcVdkUBrtqrjCeD57pU`
         console.log(url);
+
         fetch(url)
             .then(response => {
                 if(!response.ok) {
@@ -49,6 +53,24 @@ class SearchBook extends Component {
         })
     }
 
+    changePrintTypeSelection = (value) => {
+        this.setState({
+            printType: value
+        });
+    }
+
+    changeBookTypeSelection = (value) => {
+        if(value === "no-filter") {
+            this.setState({
+                bookType: ""
+            })
+        } else {
+            this.setState({
+                bookType: `&filter=${value}`
+            })
+        };
+    }
+
     render() {
         const error = this.state.error
             ? <div className="error">{this.state.error}</div>
@@ -67,11 +89,14 @@ class SearchBook extends Component {
                             id="search"
                             value={this.state.q}
                             onChange={e => this.handleInput(e.target.value)}
-                            />
+                            required/>
                         <button type="submit">Search</button>
                     </form>
                 </div>
-                <Filters query={this.state.q}/>
+                <Filters 
+                    query={this.state.q}
+                    changePrintType={this.changePrintTypeSelection}
+                    changeBookType={this.changeBookTypeSelection}/>
                 <BookResults bookItems={this.state.items}/>
             </>
         )
