@@ -3,8 +3,10 @@ import './BookItem.css';
 
 export default function BookItem (props) {
     let price = null;
-    if (!props.saleInfo.retailPrice) {
+    if (props.saleInfo.saleability === "NOT_FOR_SALE") {
         price = "No Price Available";
+    } else if (props.saleInfo.saleability === "FREE") {
+        price = "Free";
     } else {
         price = '$' + props.saleInfo.retailPrice.amount;
     }

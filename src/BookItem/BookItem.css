@@ -24,3 +24,7 @@ a:hover, a:focus {
     font-size: 1.01em;
     text-decoration: underline;
 }
+
+h3 {
+    font-weight: 500;
+}

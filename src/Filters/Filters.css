@@ -10,3 +10,11 @@
 .book-type-filter {
     padding-left: 20px;
 }
+
+select {
+    font-size: 1.05em;
+}
+
+#book-type {
+    width: 145px;
+}

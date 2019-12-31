@@ -8,10 +8,10 @@ class SearchBookInput extends Component {
     constructor(props){
         super(props);
         this.state = {
-            q: "",
-            items: [],
-            printType: "all",
-            bookType: ""
+            q: "", //search input
+            items: [], //book items
+            printType: "all", //filter option
+            bookType: "" //filter option
         }
     }
 
@@ -21,7 +21,7 @@ class SearchBookInput extends Component {
         let printFilter = this.state.printType;
         let ebookFilter = this.state.bookType;
         const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&printType=${printFilter}${ebookFilter}&key=AIzaSyCTT0fo1MiiJFyaMcVdkUBrtqrjCeD57pU`
-        console.log(url);
+        console.log(url); //https://www.googleapis.com/books/v1/volumes?q=flowers&printType=all&filter=paid-ebooks&key=AIzaSyCTT0fo1MiiJFyaMcVdkUBrtqrjCeD57pU
 
         fetch(url)
             .then(response => {
