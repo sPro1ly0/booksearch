@@ -94,7 +94,7 @@ class SearchBook extends Component {
                     </form>
                 </div>
                 <Filters 
-                    query={this.state.q}
+                    //query={this.state.q}
                     changePrintType={this.changePrintTypeSelection}
                     changeBookType={this.changeBookTypeSelection}/>
                 <BookResults bookItems={this.state.items}/>
