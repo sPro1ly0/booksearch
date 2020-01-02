@@ -7,6 +7,7 @@ class BookResultsList extends Component {
         const books = this.props.bookItems.map((book, i) => 
             <BookItem {...book} key={i}/>
         );
+    
         return (
             <div className="book-result-list">
                 {books}
